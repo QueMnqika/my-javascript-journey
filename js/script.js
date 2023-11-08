@@ -63,3 +63,69 @@ let unknown;
 
 console.log(nada);
 console.log(unknown);
+
+// TASK 3: FUNCTIONS AND CONDITIONAL STATEMENTS
+
+let rands = 1000;
+
+function toDollars(dollars) {
+    return rands*dollars
+}
+
+console.log(`R1000 is equal to $${toDollars(0.054)}`);
+
+function toEuros(euros) {
+    return rands*euros
+}
+
+console.log(`R1000 is equal to €${toEuros(0.051)}`);
+
+function toPounds(pounds) {
+    return rands*pounds
+}
+
+console.log(`R1000 is equal to £${toPounds(0.044)}`);
+
+
+let value = 400;
+let vat = 15/100;
+let vatValue = vat * value;
+
+let calculate = () => {
+   return value + vatValue
+}
+
+console.log(`The amount after tax is R${calculate()}`);
+
+let firstNum = 8;
+let secondNum = 20;
+let thirdNum = 14;
+let oddNum = firstNum%2
+
+let compare = () => {
+    if (firstNum < secondNum) {
+       console.log(`The larger nummber is ${secondNum}`);
+    }
+}
+
+compare();
+
+let results = (firstNum) => {
+     if (oddNum != 0) {
+        console.log(`1stNum is not an even number`);
+    } else {
+        console.log(`1stNum is an even number`);
+    }
+}
+
+results();
+
+if (firstNum>secondNum && firstNum>thirdNum) {
+    console.log('error');
+}else if (secondNum > firstNum && secondNum > thirdNum) {
+    console.log(`${secondNum}, ${thirdNum}, ${firstNum}`)
+}else if (thirdNum > firstNum && thirdNum > secondNum) {
+    console.log('error');
+}else{
+    console.log('Please try again');
+}
